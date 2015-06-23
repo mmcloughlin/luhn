@@ -32,3 +32,12 @@ def generate(string):
     """
     cksum = checksum(string + '0')
     return (10 - cksum) % 10
+
+def append(string):
+    """
+    Append Luhn check digit to the end of the provided string.
+
+    >>> append('53461861341123')
+    '534618613411234'
+    """
+    return string + str(generate(string))

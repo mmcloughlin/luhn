@@ -26,3 +26,6 @@ def test_invalid():
 
 def test_generate():
     assert luhn.generate('7992739871') == 3
+
+def test_append():
+    assert luhn.append('53461861341123') =='534618613411234'

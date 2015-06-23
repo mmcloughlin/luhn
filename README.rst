@@ -28,6 +28,13 @@ and use ``generate`` to produce them
     >>> generate('53461861341123')
     4
 
+or ``append`` for convenience
+
+.. code:: python
+
+    >>> append('53461861341123')
+    '534618613411234'
+
 
 .. |pypi| image:: https://img.shields.io/pypi/v/luhn.svg?style=flat-square
    :target: https://pypi.python.org/pypi/luhn
