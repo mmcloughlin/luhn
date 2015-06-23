@@ -1,3 +1,5 @@
+__version__ = '0.1.0'
+
 def checksum(string):
     digits = map(int, string)
     odd_sum = sum(digits[-1::-2])
