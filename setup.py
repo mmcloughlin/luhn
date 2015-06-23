@@ -16,4 +16,6 @@ setup(name='luhn',
       author_email='mmcloughlin@gmail.com',
       license='MIT',
       py_modules=['luhn'],
+      test_suite='nose.collector',
+      tests_require=['nose'],
       )
