@@ -23,3 +23,6 @@ def test_valid():
 
 def test_invalid():
     assert not luhn.verify('4222222222222222')
+
+def test_generate():
+    assert luhn.generate('7992739871') == 3

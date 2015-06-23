@@ -6,3 +6,7 @@ def checksum(string):
 
 def verify(string):
     return (checksum(string) == 0)
+
+def generate(string):
+    cksum = checksum(string + '0')
+    return (10 - cksum) % 10
