@@ -7,7 +7,7 @@ Generate and verify Luhn check digits
 
 Install with
 
-..
+::
 
     pip install luhn
 
