@@ -32,3 +32,6 @@ def test_append():
 
 def test_drop():
     assert luhn.drop('534618613411234') =='53461861341123'
+
+def test_drop_none():
+    assert luhn.drop('53461861341123') =='53461861341123'
