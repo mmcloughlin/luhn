@@ -35,6 +35,12 @@ or ``append`` for convenience
     >>> append('53461861341123')
     '534618613411234'
 
+or ``drop`` for convenience
+
+.. code:: python
+
+    >>> drop('534618613411234')
+    '53461861341123'
 
 .. |pypi| image:: https://img.shields.io/pypi/v/luhn.svg?style=flat-square
    :target: https://pypi.python.org/pypi/luhn

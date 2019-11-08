@@ -29,3 +29,6 @@ def test_generate():
 
 def test_append():
     assert luhn.append('53461861341123') =='534618613411234'
+
+def test_drop():
+    assert luhn.drop('534618613411234') =='53461861341123'

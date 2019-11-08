@@ -1,4 +1,4 @@
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 def checksum(string):
     """
@@ -41,3 +41,13 @@ def append(string):
     '534618613411234'
     """
     return string + str(generate(string))
+
+def drop(string):
+    """
+    Drop Luhn check digit from the end of the provided string.
+
+    >>> append('534618613411234')
+    '53461861341123'
+    """
+    if verify(string):
+        return string[:-1]
