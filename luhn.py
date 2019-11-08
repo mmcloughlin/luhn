@@ -51,3 +51,5 @@ def drop(string):
     """
     if verify(string):
         return string[:-1]
+    else:
+        return string
