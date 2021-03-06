@@ -10,7 +10,7 @@ def checksum(string):
     even_sum = sum([sum(divmod(2 * d, 10)) for d in digits[-2::-2]])
     return (odd_sum + even_sum) % 10
 
-def verify(string):
+def verify(info):
     """
     Check if the provided string of digits satisfies the Luhn checksum.
 
@@ -19,9 +19,11 @@ def verify(string):
     >>> verify('534618613411236')
     False
     """
-    return (checksum(string) == 0)
+    if type(info) == int:
+        info = str(info)
+    return (checksum(info) == 0)
 
-def generate(string):
+def generate(info):
     """
     Generate the Luhn check digit to append to the provided string.
 
@@ -30,14 +32,18 @@ def generate(string):
     >>> generate('53461861341123')
     4
     """
-    cksum = checksum(string + '0')
+    if type(info) == int:
+        info = str(info)
+    cksum = checksum(info + '0')
     return (10 - cksum) % 10
 
-def append(string):
+def append(info):
     """
     Append Luhn check digit to the end of the provided string.
 
     >>> append('53461861341123')
     '534618613411234'
     """
-    return string + str(generate(string))
+    if type(info) == int:
+        info = str(info)    
+    return info + str(generate(info))
