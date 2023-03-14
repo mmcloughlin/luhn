@@ -1,5 +1,6 @@
-from setuptools import setup
 import re
+
+from setuptools import setup
 
 module_file = open('luhn.py').read()
 metadata = dict(re.findall("__([a-z]+)__\s*=\s*'([^']+)'", module_file))
