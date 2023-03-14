@@ -1,4 +1,5 @@
-__version__ = '0.2.0'
+__version__ = "0.2.0"
+
 
 def checksum(string):
     """
@@ -10,6 +11,7 @@ def checksum(string):
     even_sum = sum([sum(divmod(2 * d, 10)) for d in digits[-2::-2]])
     return (odd_sum + even_sum) % 10
 
+
 def verify(string):
     """
     Check if the provided string of digits satisfies the Luhn checksum.
@@ -19,7 +21,8 @@ def verify(string):
     >>> verify('534618613411236')
     False
     """
-    return (checksum(string) == 0)
+    return checksum(string) == 0
+
 
 def generate(string):
     """
@@ -30,8 +33,9 @@ def generate(string):
     >>> generate('53461861341123')
     4
     """
-    cksum = checksum(string + '0')
+    cksum = checksum(string + "0")
     return (10 - cksum) % 10
+
 
 def append(string):
     """
